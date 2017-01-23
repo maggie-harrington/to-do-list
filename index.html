@@ -8,5 +8,50 @@
     <title>To Do List</title>
   </head>
   <body>
+    <div class="container">
+      <h1>To Do List</h1>
+      <div class="col-md-6">
+        <h2>Add a task:</h2>
+        <form id="new-task">
+          <div class="form-group">
+            <label for="new-title">Task:</label>
+            <input type="text" class="form-control" id="new-title">
+          </div>
+          <div class="form-group">
+            <label for="new-due">Due:</label>
+            <input type="date" class="form-control" id="new-due">
+          </div>
+          <div class="form-group">
+            <label for="new-notes">Notes:</label>
+            <input type="text" class="form-control" id="new-notes">
+          </div>
+          <div class="form-group">
+            <label for="new-priority">Priority:</label>
+            <select name="priorities">
+              <option value="1">High</option>
+              <option value="2" selected="selected">Normal</option>
+              <option value="3">Low</option>
+            </select>
+          </div>
+
+          <button type="submit" class = "btn">Add task</button>
+
+        </form>
+
+        <div id="tasks">
+          <h2>Tasks:</h2>
+          <ul></ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div id="show-task">
+          <h2 id="show-title"></h2>
+          <p>Due: <span id="show-due"></span></p>
+          <p>Notes:</p>
+          <p id="show-notes"></p>
+          <p>Priority: <span id="show-priority"></span></p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
